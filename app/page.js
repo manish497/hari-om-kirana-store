@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-export const metadata = {
-  title: "Hari Om Kirana Store | Wholesale & Retail Kirana in Gorakhpur",
-  description:
-    "Hari Om Kirana Store – trusted wholesale and retail general store in Gorakhpur. Rice, pulses, oil, spices, grocery items. UPI payment accepted.",
-};
-
 export default function HariOmKiranaStore() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-green-50 text-gray-800">
@@ -13,15 +7,26 @@ export default function HariOmKiranaStore() {
       {/* ================= HEADER ================= */}
       <header className="bg-green-700 text-white sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          
+          {/* Logo + Name */}
           <div className="flex items-center gap-3">
-            {/* LOGO */}
-            <Image src="/logo.png" alt="Hari Om Kirana Store Logo" width={50} height={50} />
+            <Image
+              src="/logo.png"
+              alt="Hari Om Kirana Store Logo"
+              width={50}
+              height={50}
+            />
             <div>
-              <h1 className="text-xl md:text-2xl font-bold">Hari Om Kirana Store</h1>
-              <p className="text-xs md:text-sm">Wholesale & Retail General Store</p>
+              <h1 className="text-xl md:text-2xl font-bold">
+                Hari Om Kirana Store
+              </h1>
+              <p className="text-xs md:text-sm">
+                Wholesale & Retail General Store
+              </p>
             </div>
           </div>
 
+          {/* Call Info */}
           <div className="hidden md:flex items-center gap-3 text-sm">
             <a href="tel:+917054062092" className="underline font-semibold">
               Call Now
@@ -32,7 +37,7 @@ export default function HariOmKiranaStore() {
         </div>
       </header>
 
-      {/* ================= HERO / BANNER ================= */}
+      {/* ================= BANNER ================= */}
       <section className="relative">
         <Image
           src="/banner.jpg"
@@ -79,12 +84,25 @@ export default function HariOmKiranaStore() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-8 bg-green-50 p-8 rounded-2xl items-center">
           <div>
-            <h2 className="text-2xl font-bold mb-2">UPI भुगतान स्वीकार है</h2>
-            <p className="mb-2">PhonePe • Google Pay • Paytm</p>
-            <p className="font-semibold text-lg">7054062092@okbizaxis</p>
+            <h2 className="text-2xl font-bold mb-2">
+              UPI भुगतान स्वीकार है
+            </h2>
+            <p className="mb-2">
+              PhonePe • Google Pay • Paytm
+            </p>
+            <p className="font-semibold text-lg">
+              7054062092@okbizaxis
+            </p>
           </div>
+
           <div className="bg-white p-4 rounded-xl text-center shadow">
-            <Image src="/upi-qr.jpg" alt="UPI QR" width={200} height={200} className="mx-auto" />
+            <Image
+              src="/upi-qr.jpg"
+              alt="UPI QR Code"
+              width={200}
+              height={200}
+              className="mx-auto"
+            />
             <p className="text-sm mt-2">Scan & Pay</p>
           </div>
         </div>
@@ -94,11 +112,20 @@ export default function HariOmKiranaStore() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-3xl font-bold mb-4">दुकान का पता</h2>
-            <p className="mb-2">📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
-            <p className="mb-2">Gorakhpur, Uttar Pradesh – 273016</p>
-            <p className="mb-2">📞 7054062092</p>
+            <h2 className="text-3xl font-bold mb-4">
+              दुकान का पता
+            </h2>
+            <p className="mb-2">
+              📍 Naveen Mandi Sthal Mahewa, Transport Nagar
+            </p>
+            <p className="mb-2">
+              Gorakhpur, Uttar Pradesh – 273016
+            </p>
+            <p className="mb-2">
+              📞 7054062092
+            </p>
           </div>
+
           <iframe
             title="Hari Om Kirana Store Map"
             src="https://www.google.com/maps?q=Naveen%20Mandi%20Sthal%20Mahewa%20Gorakhpur&output=embed"
@@ -109,11 +136,19 @@ export default function HariOmKiranaStore() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-gray-900 text-gray-300 text-center py-6">
-        <p>© {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
+        </p>
       </footer>
 
       {/* ================= FLOATING WHATSAPP ================= */}
-      https://wa.me/917054062092
+      <a
+        href="https://wa.me/917054062092"
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-xl font-semibold"
+      >
+        WhatsApp
+      </a>
     </div>
   );
 }
