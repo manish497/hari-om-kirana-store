@@ -1,8 +1,14 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Hari Om Kirana Store | Wholesale & Retail Kirana in Gorakhpur",
+  description:
+    "Hari Om Kirana Store is a trusted wholesale and retail general store in Gorakhpur. Groceries, pulses, oil, spices with UPI payment facility.",
+};
+
 export default function HariOmKiranaStore() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 pb-16">{/* padding-bottom for bottom bar */}
+    <div className="min-h-screen bg-white text-gray-800">
 
       {/* ================= HEADER ================= */}
       <header className="bg-green-700 text-white">
@@ -54,14 +60,16 @@ export default function HariOmKiranaStore() {
         </div>
       </section>
 
-      {/* ================= LOCATION ================= */}
-      <section className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-2xl font-bold mb-3">दुकान का पता</h2>
-          <p>📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
-          <p>Gorakhpur, Uttar Pradesh – 273016</p>
-          <p className="mt-2">📞 7054062092</p>
-        </div>
+      {/* ================= LOCATION + WHATSAPP ABOVE MAP ================= */}
+      <section className="max-w-6xl mx-auto px-4 py-10">
+        <h2 className="text-2xl font-bold mb-4">दुकान का पता</h2>
+
+        <p className="mb-1">📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
+        <p className="mb-1">Gorakhpur, Uttar Pradesh – 273016</p>
+        <p className="mb-4">📞 7054062092</p>
+
+        {/* ✅ WhatsApp Button (FIXED & ABOVE MAP) */}
+        https://wa.me/917054062092
 
         <iframe
           title="Hari Om Kirana Store Map"
@@ -75,16 +83,6 @@ export default function HariOmKiranaStore() {
         © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
       </footer>
 
-      {/* ================= BOTTOM CALL / WHATSAPP BAR ================= */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-md md:hidden flex z-50">
-        <a
-          href="tel:+917054062092"
-          className="w-1/2 text-center py-3 font-semibold text-green-700"
-        >
-          📞 Call
-        </a>
-        https://wa.me/917054062092
-      </div>
     </div>
   );
 }
