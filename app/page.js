@@ -10,58 +10,48 @@ export default function HariOmKiranaStore() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 via-white to-green-50 text-gray-800">
 
-      {/* ================= HEADER ================= */}
+      {/* ================= HEADER (SINGLE LINE ONLY – NO DUPLICATION) ================= */}
       <header className="bg-green-700 text-white sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-4 py-3">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
 
-          {/* Logo + Full Name (HARI OM FIXED) */}
-          <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="Hari Om Kirana Store Logo" width={40} height={40} />
-            <h1 className="text-lg md:text-xl font-bold whitespace-nowrap">
-              Hari Om Kirana Store
-            </h1>
+            {/* Logo + Correct Business Name */}
+            <div className="flex items-center gap-3">
+              <Image src="/logo.png" alt="Hari Om Kirana Store Logo" width={40} height={40} />
+              <h1 className="text-lg md:text-xl font-bold whitespace-nowrap">
+                Hari Om Kirana Store
+              </h1>
+            </div>
+
+            {/* ONE inline text – works for both mobile & desktop */}
+            <div className="text-xs sm:text-sm font-medium text-white whitespace-nowrap">
+              Wholesale & Retail General Store | Gorakhpur, UP |{" "}
+              <a href="tel:+917054062092" className="underline">Call Now</a>
+            </div>
+
           </div>
-
-          {/* Inline Info – Desktop ONLY (shown once) */}
-          <div className="hidden sm:flex items-center gap-2 text-sm font-medium whitespace-nowrap">
-            <span>Wholesale & Retail General Store</span>
-            <span>|</span>
-            <span>Gorakhpur, UP</span>
-            <span>|</span>
-            <a
-              href="tel:+917054062092"
-              className="underline"
-            >
-              Call Now
-            </a>
-          </div>
-        </div>
-
-        {/* Inline Info – Mobile ONLY (shown once) */}
-        <div className="sm:hidden text-center text-xs bg-green-800 px-3 py-2">
-          Wholesale & Retail General Store | Gorakhpur, UP |{" "}
-          <a href="tel:+917054062092" className="underline">Call Now</a>
         </div>
       </header>
 
-      {/* ================= HERO / BANNER ================= */}
-      <section className="relative overflow-hidden">
-        <Image
-          src="/banner.jpg"
-          alt="Hari Om Kirana Store Banner"
-          width={1600}
-          height={800}
-          priority
-          className="w-full h-[220px] sm:h-[300px] md:h-[380px] object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center">
-          <div className="max-w-6xl mx-auto px-4 text-white">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-              आपका भरोसेमंद किराना पार्टनर
-            </h2>
-            <p className="text-xs sm:text-sm md:text-base max-w-xl">
-              Gorakhpur में स्थित एक विश्वसनीय थोक एवं खुदरा किराना स्टोर
-            </p>
+      {/* ================= BANNER (FIXED ASPECT RATIO – NEVER OUT OF FRAME) ================= */}
+      <section className="relative w-full">
+        <div className="relative w-full aspect-[16/7] sm:aspect-[16/6]">
+          <Image
+            src="/banner.jpg"
+            alt="Hari Om Kirana Store Banner"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/40 flex items-center">
+            <div className="max-w-6xl mx-auto px-4 text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
+                आपका भरोसेमंद किराना पार्टनर
+              </h2>
+              <p className="text-xs sm:text-sm md:text-base max-w-xl">
+                Gorakhpur में स्थित एक विश्वसनीय थोक एवं खुदरा किराना स्टोर
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -103,7 +93,7 @@ export default function HariOmKiranaStore() {
         </div>
       </section>
 
-      {/* ================= LOCATION + WHATSAPP ABOVE MAP ================= */}
+      {/* ================= LOCATION + WORKING WHATSAPP ABOVE MAP ================= */}
       <section className="bg-white py-12">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
           <div>
@@ -112,7 +102,6 @@ export default function HariOmKiranaStore() {
             <p className="mb-2">Gorakhpur, Uttar Pradesh – 273016</p>
             <p className="mb-4">📞 7054062092</p>
 
-            {/* WhatsApp Button ABOVE Map */}
             https://wa.me/917054062092
           </div>
 
