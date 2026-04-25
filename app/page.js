@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HariOmKiranaStore() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-white text-gray-800 pb-16">{/* padding-bottom for bottom bar */}
 
       {/* ================= HEADER ================= */}
       <header className="bg-green-700 text-white">
@@ -15,9 +15,11 @@ export default function HariOmKiranaStore() {
         </div>
       </header>
 
-      {/* ================= HERO TEXT (NO BANNER) ================= */}
+      {/* ================= HERO TEXT ================= */}
       <section className="max-w-6xl mx-auto px-4 py-10">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">आपका भरोसेमंद किराना पार्टनर</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+          आपका भरोसेमंद किराना पार्टनर
+        </h2>
         <p className="max-w-3xl text-gray-700">
           Gorakhpur में स्थित Hari Om Kirana Store एक विश्वसनीय थोक एवं खुदरा किराना स्टोर है,
           जहाँ उचित दाम, भरोसेमंद सप्लाई और डिजिटल भुगतान की सुविधा उपलब्ध है।
@@ -45,7 +47,6 @@ export default function HariOmKiranaStore() {
             <p className="mt-2">PhonePe • Google Pay • Paytm</p>
             <p className="font-semibold mt-1">7054062092@okbizaxis</p>
           </div>
-
           <div className="bg-white p-4 rounded-xl shadow text-center">
             <Image src="/upi-qr.jpg" alt="UPI QR" width={180} height={180} className="mx-auto" />
             <p className="text-sm mt-2">Scan & Pay</p>
@@ -53,15 +54,13 @@ export default function HariOmKiranaStore() {
         </div>
       </section>
 
-      {/* ================= LOCATION + WHATSAPP (FIXED) ================= */}
+      {/* ================= LOCATION ================= */}
       <section className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-2xl font-bold mb-3">दुकान का पता</h2>
           <p>📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
           <p>Gorakhpur, Uttar Pradesh – 273016</p>
           <p className="mt-2">📞 7054062092</p>
-
-          https://wa.me/917054062092
         </div>
 
         <iframe
@@ -76,6 +75,16 @@ export default function HariOmKiranaStore() {
         © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
       </footer>
 
+      {/* ================= BOTTOM CALL / WHATSAPP BAR ================= */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-md md:hidden flex z-50">
+        <a
+          href="tel:+917054062092"
+          className="w-1/2 text-center py-3 font-semibold text-green-700"
+        >
+          📞 Call
+        </a>
+        https://wa.me/917054062092
+      </div>
     </div>
   );
 }
