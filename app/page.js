@@ -1,16 +1,10 @@
 import Image from "next/image";
 
-export const metadata = {
-  title: "Hari Om Kirana Store | Wholesale & Retail Kirana in Gorakhpur",
-  description:
-    "Hari Om Kirana Store is a trusted wholesale and retail general store in Gorakhpur. Groceries, pulses, oil, spices with UPI payment facility.",
-};
-
 export default function HariOmKiranaStore() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
 
-      {/* ================= HEADER (SITS ABOVE BANNER – NO OVERLAP) ================= */}
+      {/* ================= HEADER ================= */}
       <header className="bg-green-700 text-white">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <h1 className="text-xl md:text-2xl font-bold">
@@ -18,37 +12,38 @@ export default function HariOmKiranaStore() {
           </h1>
           <p className="text-sm mt-1">
             Wholesale & Retail General Store | Gorakhpur, UP |{" "}
-            <a href="tel:+917054062092" className="underline">Call Now</a>
+            <a href="tel:+917054062092" className="underline">
+              Call Now
+            </a>
           </p>
         </div>
       </header>
 
-      {/* ================= BANNER (STARTS AFTER HEADER, FIXED HEIGHT) ================= */}
-      <section className="relative">
-        <div className="w-full h-[260px] sm:h-[320px] md:h-[380px] overflow-hidden">
-          <Image
-            src="/banner.jpg"
-            alt="Hari Om Kirana Store Banner"
-            fill
-            priority
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/35 flex items-center">
-            <div className="max-w-6xl mx-auto px-4 text-white">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
-                आपका भरोसेमंद किराना पार्टनर
-              </h2>
-              <p className="text-sm sm:text-base max-w-xl">
-                Gorakhpur में स्थित एक विश्वसनीय थोक एवं खुदरा किराना स्टोर
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* ================= CLEAN BANNER (IMAGE ONLY) ================= */}
+      <section className="w-full h-[200px] sm:h-[260px] md:h-[320px] overflow-hidden">
+        <Image
+          src="/banner.jpg"
+          alt="Hari Om Kirana Store"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </section>
+
+      {/* ================= HERO TEXT (BELOW BANNER) ================= */}
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+          आपका भरोसेमंद किराना पार्टनर
+        </h2>
+        <p className="max-w-2xl text-gray-700">
+          Gorakhpur में स्थित एक विश्वसनीय थोक एवं खुदरा किराना स्टोर,
+          जहाँ उचित दाम, भरोसेमंद सप्लाई और डिजिटल भुगतान की सुविधा उपलब्ध है।
+        </p>
       </section>
 
       {/* ================= PRODUCTS ================= */}
-      <section className="py-12 max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">हमारे प्रमुख उत्पाद</h2>
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        <h2 className="text-2xl font-bold mb-4">हमारे प्रमुख उत्पाद</h2>
         <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 list-disc list-inside bg-gray-50 p-6 rounded-xl">
           <li>Rice & Wheat</li>
           <li>Pulses</li>
@@ -60,29 +55,43 @@ export default function HariOmKiranaStore() {
       </section>
 
       {/* ================= PAYMENT ================= */}
-      <section className="bg-green-50 py-12">
+      <section className="bg-green-50 py-8">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-xl md:text-2xl font-bold">UPI भुगतान स्वीकार है</h2>
+            <h2 className="text-xl font-bold">UPI भुगतान स्वीकार है</h2>
             <p className="mt-2">PhonePe • Google Pay • Paytm</p>
             <p className="font-semibold mt-1">7054062092@okbizaxis</p>
           </div>
-          <div className="bg-white p-4 rounded-xl text-center shadow">
-            <Image src="/upi-qr.jpg" alt="UPI QR" width={180} height={180} className="mx-auto" />
+
+          <div className="bg-white p-4 rounded-xl shadow text-center">
+            <Image
+              src="/upi-qr.jpg"
+              alt="UPI QR"
+              width={180}
+              height={180}
+              className="mx-auto"
+            />
             <p className="text-sm mt-2">Scan & Pay</p>
           </div>
         </div>
       </section>
 
-      {/* ================= LOCATION + WHATSAPP BUTTON ================= */}
-      <section className="py-12 max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+      {/* ================= LOCATION + WHATSAPP ================= */}
+      <section className="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-2xl font-bold mb-3">दुकान का पता</h2>
           <p>📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
           <p>Gorakhpur, Uttar Pradesh – 273016</p>
           <p className="mt-2">📞 7054062092</p>
 
-          https://wa.me/917054062092
+          {/* ✅ WORKING WHATSAPP BUTTON */}
+          <a
+            href="https://wa.me/917054062092"
+            target="_blank"
+            className="inline-block mt-4 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            WhatsApp पर संपर्क करें
+          </a>
         </div>
 
         <iframe
@@ -96,6 +105,7 @@ export default function HariOmKiranaStore() {
       <footer className="bg-gray-900 text-gray-300 text-center py-6">
         © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
       </footer>
+
     </div>
   );
 }
