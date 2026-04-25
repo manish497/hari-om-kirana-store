@@ -72,21 +72,17 @@ export default function HariOmKiranaStore() {
         </div>
       </section>
 
-      {/* ================= LOCATION + CONTACT ================= */}
+      {/* ================= LOCATION ================= */}
       <section className="max-w-6xl mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-4">
           दुकान का पता
         </h2>
 
-        <p className="mb-1">
-          📍 Naveen Mandi Sthal Mahewa, Transport Nagar
-        </p>
-        <p className="mb-3">
-          Gorakhpur, Uttar Pradesh – 273016
-        </p>
+        <p className="mb-1">📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
+        <p className="mb-3">Gorakhpur, Uttar Pradesh – 273016</p>
 
-        {/* ✅ WhatsApp | Phone in one line */}
-        <div className="flex items-center gap-2 text-lg mb-8">
+        {/* ✅ WhatsApp | Phone — with EXTRA spacing below */}
+        <div className="flex items-center gap-2 text-lg mb-10">
           <a
             href="https://wa.me/917054062092"
             target="_blank"
@@ -101,7 +97,7 @@ export default function HariOmKiranaStore() {
           </a>
         </div>
 
-        {/* ✅ Map now has proper breathing space */}
+        {/* ✅ Map now has comfortable spacing */}
         <iframe
           title="Hari Om Kirana Store Map"
           src="https://www.google.com/maps?q=Naveen%20Mandi%20Sthal%20Mahewa%20Gorakhpur&output=embed"
@@ -118,4 +114,3 @@ export default function HariOmKiranaStore() {
     </div>
   );
 }
-``
