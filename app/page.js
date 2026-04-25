@@ -5,6 +5,7 @@ export default function HariOmKiranaStore() {
       {/* ================= HEADER ================= */}
       <header className="bg-green-700 text-white sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 py-4">
+          
           <h1 className="text-2xl md:text-3xl font-bold">
             Hari Om Kirana Store
           </h1>
@@ -13,9 +14,12 @@ export default function HariOmKiranaStore() {
             Wholesale & Retail General Store
           </p>
 
-          {/* Header info line (FIXED – no raw URL) */}
+          {/* ✅ CLEAN HEADER LINE */}
           <div className="mt-2 flex items-center gap-3 text-sm">
-            tel:+917054062092
+            <a
+              href="tel:+917054062092"
+              className="underline font-medium"
+            >
               Call Now
             </a>
             <span>|</span>
@@ -39,14 +43,16 @@ export default function HariOmKiranaStore() {
           </p>
         </div>
 
-        <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
-          /shop.jpg
+        <div className="bg-white shadow-xl rounded-2xl h-64 flex items-center justify-center">
+          <span className="text-gray-400">Shop Image</span>
+          {/* later replace with <img src="/shop.jpg" /> */}
         </div>
       </section>
 
       {/* ================= PRODUCTS ================= */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-6">
+          
           <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <h2 className="text-3xl font-bold">
               हमारे प्रमुख उत्पाद
@@ -56,8 +62,8 @@ export default function HariOmKiranaStore() {
             </span>
           </div>
 
-          {/* Bullet list ONLY */}
-          <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 list-disc list-inside text-lg">
+          {/* ✅ BULLET LIST – NO REPETITION */}
+          <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 list-disc list-inside text-lg">
             <li>Rice & Wheat</li>
             <li>Pulses</li>
             <li>Edible Oil & Ghee</li>
@@ -71,6 +77,7 @@ export default function HariOmKiranaStore() {
       {/* ================= PAYMENT ================= */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-10 items-center bg-green-50 p-8 rounded-2xl">
+          
           <div>
             <h2 className="text-2xl font-bold mb-3">
               UPI भुगतान स्वीकार है
@@ -84,10 +91,8 @@ export default function HariOmKiranaStore() {
           </div>
 
           <div className="bg-white p-4 rounded-xl text-center">
-            /upi-qr.jpg
-            <p className="text-sm mt-2">
-              Scan & Pay
-            </p>
+            <span className="text-gray-400">UPI QR</span>
+            {/* later replace with <img src="/upi-qr.jpg" /> */}
           </div>
         </div>
       </section>
@@ -95,6 +100,7 @@ export default function HariOmKiranaStore() {
       {/* ================= LOCATION ================= */}
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+          
           <div>
             <h2 className="text-3xl font-bold mb-4">
               दुकान का पता
@@ -123,12 +129,11 @@ export default function HariOmKiranaStore() {
       {/* ================= FOOTER ================= */}
       <footer className="bg-gray-900 text-gray-300 text-center py-6">
         <p>
-          © {new Date().getFullYear()} Hari Om Kirana Store.
-          All rights reserved.
+          © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
         </p>
       </footer>
 
-      {/* ================= FLOATING WHATSAPP ================= */}
+      {/* ✅ ONLY WHATSAPP (FLOATING BUTTON) */}
       <a
         href="https://wa.me/917054062092"
         target="_blank"
