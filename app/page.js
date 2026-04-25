@@ -72,14 +72,18 @@ export default function HariOmKiranaStore() {
         </div>
       </section>
 
-      {/* ================= LOCATION + INLINE WHATSAPP | PHONE ================= */}
+      {/* ================= LOCATION ================= */}
       <section className="max-w-6xl mx-auto px-4 py-8">
         <h2 className="text-2xl font-bold mb-4">दुकान का पता</h2>
 
-        <p className="mb-1">📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
-        <p className="mb-3">Gorakhpur, Uttar Pradesh – 273016</p>
+        <p className="mb-1">
+          📍 Naveen Mandi Sthal Mahewa, Transport Nagar
+        </p>
+        <p className="mb-3">
+          Gorakhpur, Uttar Pradesh – 273016
+        </p>
 
-        {/* ✅ WhatsApp and Phone on ONE line with a single bar */}
+        {/* ✅ WhatsApp | Phone in one line */}
         <div className="flex items-center gap-2 text-lg mb-6">
           <a
             href="https://wa.me/917054062092"
@@ -90,11 +94,15 @@ export default function HariOmKiranaStore() {
             WhatsApp
           </a>
           <span>|</span>
-          <a href="tel:+917054062092" className="font-semibold">
+          <a
+            href="tel:+917054062092"
+            className="font-semibold"
+          >
             📞 7054062092
           </a>
         </div>
 
+        {/* ✅ Space before map already handled by mb-6 above */}
         <iframe
           title="Hari Om Kirana Store Map"
           src="https://www.google.com/maps?q=Naveen%20Mandi%20Sthal%20Mahewa%20Gorakhpur&output=embed"
