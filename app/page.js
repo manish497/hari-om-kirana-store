@@ -8,11 +8,12 @@ export default function HariOmKiranaStore() {
             <h1 className="text-2xl md:text-3xl font-bold">Hari Om Kirana Store</h1>
             <p className="text-sm">Wholesale & Retail General Store</p>
           </div>
-          <div className="mt-3 md:mt-0 flex gap-3">
+          <div className="mt-3 md:mt-0 flex gap-3 items-center">
             <a
               href="tel:+917054062092"
               className="bg-white text-green-700 px-4 py-2 rounded-lg font-semibold shadow"
             >Call Now</a>
+            <span className="hidden md:inline">|</span>
             https://wa.me/917054062092
           </div>
         </div>
@@ -35,15 +36,17 @@ export default function HariOmKiranaStore() {
       {/* Products */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10 text-center">हमारे प्रमुख उत्पाद</h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {["Rice & Wheat", "Pulses", "Edible Oil & Ghee", "Spices", "Sugar & Salt", "Packaged Foods"].map((item) => (
-              <div key={item} className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-                <h4 className="font-semibold text-xl mb-2">{item}</h4>
-                <p className="text-sm text-gray-600">थोक एवं खुदरा दोनों उपलब्ध</p>
-              </div>
-            ))}
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+            <h2 className="text-3xl font-bold">हमारे प्रमुख उत्पाद</h2>
+            <span className="text-sm text-gray-600 mt-2 md:mt-0">(थोक एवं खुदरा दोनों उपलब्ध)</span>
           </div>
+          <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 list-disc list-inside">
+            {["Rice & Wheat", "Pulses", "Edible Oil & Ghee", "Spices", "Sugar & Salt", "Packaged Foods"].map((item) => (
+              <li key={item} className="bg-white p-5 rounded-xl shadow">
+                <span className="font-semibold">{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
