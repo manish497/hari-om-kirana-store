@@ -23,28 +23,24 @@ export default function HariOmKiranaStore() {
         <div>
           <h2 className="text-4xl font-bold mb-4">आपका भरोसेमंद किराना पार्टनर</h2>
           <p className="mb-6 text-lg">
-            Hari Om Kirana Store Gorakhpur में स्थित एक विश्वसनीय थोक एवं खुदरा किराना स्टोर है।
-            हम गुणवत्तापूर्ण सामान, उचित दाम और समय पर सप्लाई का वादा करते हैं।
+            Hari Om Kirana Store Gorakhpur में स्थित एक विश्वसनीय थोक एवं खुदरा जनरल स्टोर है।
+            हम रोजमर्रा के किराना सामान की थोक व फुटकर सप्लाई उचित दामों पर करते हैं।
           </p>
         </div>
         <div className="bg-white shadow-xl rounded-2xl overflow-hidden">
-          <img
-            src="/shop.jpg"
-            alt="Hari Om Kirana Store"
-            className="w-full h-64 object-cover"
-          />
+          <img src="/shop.jpg" alt="Hari Om Kirana Store" className="w-full h-64 object-cover" />
         </div>
       </section>
 
       {/* Products */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-10 text-center">हमारे उत्पाद</h2>
+          <h2 className="text-3xl font-bold mb-10 text-center">हमारे प्रमुख उत्पाद</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {["Rice & Wheat", "Pulses", "Edible Oil & Ghee", "Spices", "Sugar & Salt", "Packaged Foods"].map((item) => (
               <div key={item} className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h4 className="font-semibold text-xl mb-2">{item}</h4>
-                <p className="text-sm text-gray-600">Wholesale & Retail Available</p>
+                <p className="text-sm text-gray-600">थोक एवं खुदरा दोनों उपलब्ध</p>
               </div>
             ))}
           </div>
