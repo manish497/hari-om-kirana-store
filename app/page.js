@@ -2,15 +2,15 @@ import Image from "next/image";
 
 export default function HariOmKiranaStore() {
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-[#f6f8fc] via-[#eef2f7] to-[#f6f8fc] text-gray-800 pb-16">
 
       {/* ================= HEADER ================= */}
-      <header className="bg-green-700 text-white">
+      <header className="bg-gradient-to-r from-green-700 to-green-600 text-white shadow">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <h1 className="text-xl md:text-2xl font-bold">
             Hari Om Kirana Store
           </h1>
-          <p className="text-sm mt-1">
+          <p className="text-sm mt-1 opacity-95">
             Wholesale & Retail General Store | Gorakhpur, UP |{" "}
             <a href="tel:+917054062092" className="underline">
               Call Now
@@ -19,12 +19,12 @@ export default function HariOmKiranaStore() {
         </div>
       </header>
 
-      {/* ================= HERO TEXT ================= */}
-      <section className="max-w-6xl mx-auto px-4 py-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-2">
+      {/* ================= HERO ================= */}
+      <section className="max-w-6xl mx-auto px-4 py-8 bg-white/90 backdrop-blur rounded-2xl mt-6 shadow-sm">
+        <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center md:text-left">
           आपका भरोसेमंद किराना पार्टनर
         </h2>
-        <p className="max-w-3xl text-gray-700">
+        <p className="max-w-3xl text-gray-700 mx-auto md:mx-0 text-center md:text-left">
           Gorakhpur में स्थित Hari Om Kirana Store एक विश्वसनीय थोक एवं खुदरा
           किराना स्टोर है, जहाँ उचित दाम, भरोसेमंद सप्लाई और डिजिटल भुगतान की
           सुविधा उपलब्ध है।
@@ -32,11 +32,11 @@ export default function HariOmKiranaStore() {
       </section>
 
       {/* ================= PRODUCTS ================= */}
-      <section className="max-w-6xl mx-auto px-4 py-8">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+      <section className="max-w-6xl mx-auto px-4 py-8 bg-white rounded-2xl mt-6 shadow-sm">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center md:text-left">
           हमारे प्रमुख उत्पाद
         </h2>
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 list-disc list-inside bg-gray-50 p-6 rounded-xl">
+        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 list-disc list-inside bg-[#f3f6fb] p-6 rounded-xl">
           <li>Rice & Wheat</li>
           <li>Pulses</li>
           <li>Edible Oil & Ghee</li>
@@ -47,19 +47,18 @@ export default function HariOmKiranaStore() {
       </section>
 
       {/* ================= PAYMENT ================= */}
-      <section className="bg-green-50 py-8">
-        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+      <section className="max-w-6xl mx-auto px-4 py-8 bg-white rounded-2xl mt-6 shadow-sm">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h2 className="text-xl md:text-2xl font-bold">
               UPI भुगतान स्वीकार है
             </h2>
             <p className="mt-2">PhonePe • Google Pay • Paytm</p>
-            <p className="font-semibold mt-1">
+            <p className="font-semibold mt-1 text-green-700">
               7054062092@okbizaxis
             </p>
           </div>
-
-          <div className="bg-white p-4 rounded-xl shadow text-center">
+          <div className="bg-[#f3f6fb] p-4 rounded-xl text-center">
             <Image
               src="/upi-qr.jpg"
               alt="UPI QR"
@@ -73,44 +72,12 @@ export default function HariOmKiranaStore() {
       </section>
 
       {/* ================= LOCATION ================= */}
-      <section className="max-w-6xl mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold mb-4">
+      <section className="max-w-6xl mx-auto px-4 py-8 bg-white rounded-2xl mt-6 shadow-sm">
+        <h2 className="text-2xl font-bold mb-4 text-center md:text-left">
           दुकान का पता
         </h2>
 
-        <p className="mb-1">📍 Naveen Mandi Sthal Mahewa, Transport Nagar</p>
-        <p className="mb-3">Gorakhpur, Uttar Pradesh – 273016</p>
-
-        {/* ✅ WhatsApp | Phone — with EXTRA spacing below */}
-        <div className="flex items-center gap-2 text-lg mb-10">
-          <a
-            href="https://wa.me/917054062092"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-green-600 underline"
-          >
-            WhatsApp
-          </a>
-          <span>|</span>
-          <a href="tel:+917054062092" className="font-semibold">
-            📞 7054062092
-          </a>
-        </div>
-
-        {/* ✅ Map now has comfortable spacing */}
-        <iframe
-          title="Hari Om Kirana Store Map"
-          src="https://www.google.com/maps?q=Naveen%20Mandi%20Sthal%20Mahewa%20Gorakhpur&output=embed"
-          className="w-full h-64 rounded-xl border-0"
-          loading="lazy"
-        />
-      </section>
-
-      {/* ================= FOOTER ================= */}
-      <footer className="bg-gray-900 text-gray-300 text-center py-6">
-        © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
-      </footer>
-
-    </div>
-  );
-}
+        <p className="mb-1 text-center md:text-left">
+          📍 Naveen Mandi Sthal Mahewa, Transport Nagar
+        </p>
+        <p className="mb-3 text-center md:text-left">
