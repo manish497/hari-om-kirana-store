@@ -81,3 +81,59 @@ export default function HariOmKiranaStore() {
           📍 Naveen Mandi Sthal Mahewa, Transport Nagar
         </p>
         <p className="mb-3 text-center md:text-left">
+          Gorakhpur, Uttar Pradesh – 273016
+        </p>
+
+        {/* ✅ WhatsApp | Phone row */}
+        <div className="flex items-center justify-center md:justify-start gap-2 text-lg mb-10">
+          <a
+            href="https://wa.me/917054062092"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-green-600 underline"
+          >
+            WhatsApp
+          </a>
+          <span>|</span>
+          <a href="tel:+917054062092" className="font-semibold">
+            📞 7054062092
+          </a>
+        </div>
+
+        {/* Divider */}
+        <hr className="my-6 border-[#e4e8f0]" />
+
+        <iframe
+          title="Hari Om Kirana Store Map"
+          src="https://www.google.com/maps?q=Naveen%20Mandi%20Sthal%20Mahewa%20Gorakhpur&output=embed"
+          className="w-full h-64 rounded-xl border-0"
+          loading="lazy"
+        />
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="bg-gradient-to-r from-gray-900 to-gray-800 text-gray-300 text-center py-6 mt-8">
+        © {new Date().getFullYear()} Hari Om Kirana Store. All rights reserved.
+      </footer>
+
+      {/* ================= STICKY CALL / WHATSAPP (MOBILE) ================= */}
+      <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur border-t shadow md:hidden flex z-50">
+        <a
+          href="tel:+917054062092"
+          className="w-1/2 text-center py-3 font-semibold text-green-700"
+        >
+          📞 Call
+        </a>
+        <a
+          href="https://wa.me/917054062092"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-1/2 text-center py-3 font-semibold bg-green-600 text-white"
+        >
+          💬 WhatsApp
+        </a>
+      </div>
+
+    </div>
+  );
+}
